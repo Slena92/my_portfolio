@@ -1,0 +1,111 @@
+extends ../template
+
+block title
+ title Обо мне
+
+block content
+  main.content
+    section.section.header
+      .header__social
+        +socialList("header", socials)
+      .header__menu-button
+        a.nav-toggle(href="#")
+         span.nav-toggle__button
+      nav.fullscreen-nav
+        +navList("nav__list_fullscreen", "fullscreen", navItems)
+      .header__content
+        .header__person
+          .person
+            .person__photo
+              img(class="person__photo-pic" src="assets/images/content/my-ava.jpg", alt="Фотоавтора блога")
+            .person__name Сорокина Елена
+            .person__desc Личный сайт веб разработчика
+        .header__content-bg_about
+          +headerContentBg("about")
+      .header__scroll.scroll
+        a.scroll__link(href="#")#scroll-down
+          .scroll__icon
+            +icon("fill_white", "portf_arrow_down")
+
+    
+    
+
+    section.section.about#about
+      section.section__triangle.section__triangle_left
+          .triangle.triangle_color_light-beige
+            svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 100" preserveaspectratio="none")
+              polygon(points="0,100 0,0 500,85 500,100")
+      section.section__triangle.section__triangle_right
+          .triangle.triangle_color_beige
+            svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 100" preserveaspectratio="none")
+              polygon(points="0,100 0,85 500,0 500,100")
+      .about__left
+        .about__left-header
+          section.section-title
+              section.section-title__header Обо мне
+                section.section-title__bg.section-title__bg_about
+                  +headerTitleBg("about")
+
+        .about__left-content
+          .user
+            .user__photo
+              img.user__photo-pic.flex-img(src="assets/images/content/my-ava.jpg")
+            .user__name
+              section.section-title_subtitle Кто я
+            .user__desc
+              p.
+                Я веб разработчик из Москвы. Мне 25 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+              p.
+                Этот сайт я сделал в рамках обучения в  Школе онлайн образования LoftSchool. Чуть  позже я освежу в нём свой контент. А пока  посмотрите, как тут всё классно и красиво!
+
+      .about__right
+        .about__right-content
+          .skills
+            .skills__header
+              section.section-title_subtitle Чем я могу быть вам полезена
+            .skills__desc
+              p Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте по порядку.
+            .skills__section
+              +skills(skillsList)
+    
+    section.section.map
+      #google-map
+      .map__contacts
+        .contacts
+          .contacts__header
+            section.section-title_subtitle Контакты
+          .contacts__content
+            ul.contacts__list
+              each item in contacts
+                li.contacts__item
+                  .contact
+                    .contact__icon
+                      +icon("contacts", item.svg)
+                    .contact__text= item.title
+  
+  footer.footer.footer_dark.footer_dark_transparent
+    .footer__top
+      .footer__col.footer__col_copyright
+        .footer__info.
+          Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. 
+      .footer__col.footer__col_nav
+        .footer__nav
+          nav.nav
+            +navList("nav__list_footer", "footer", navItems)
+        .footer__social
+          +socialList("footer", socials)
+      .footer__col.footer__col_contacts
+        .footer__contacts
+          ul.footer__contacts-list
+            li.footer__contacts-item
+              a(href="skype:SkypeUser" class="footer__contacts-link") leno4ka129327@gmail.com
+            li.footer__contacts-item
+              a(href="mailto:leno4ka129327@gmail.com" class="footer__contacts-link") leno4ka129327@gmail.com
+            li.footer__contacts-item
+              a(href="tel:+89055008740"  class="footer__contacts-link") 8 905 500-87-40
+            li.footer__contacts-item Москва, ул. Палехская, д.12        
+    .footer__bottom
+      .footer__copyright © Сорокина Елена | создано  LoftSchool | 2017
+
+block scripts
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7FPKSzXaLsmmYLYdCDpw0hWMg0j_wsZY")

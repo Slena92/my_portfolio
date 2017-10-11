@@ -1,0 +1,133 @@
+.circles {
+  fill: none;
+  stroke-width: 20;
+}
+
+.circle__one {
+  stroke: #dfdcd5;
+}
+
+.circle__two {
+  stroke: $accent-color;
+  stroke-dasharray: 0.001 282.6;
+}
+
+.circle-0 {
+  opacity: 0;
+
+  stroke-dasharray: 0.001 282.6;
+}
+
+.circle-10 {
+  opacity: 0.1;
+
+  stroke-dasharray: 28.26 282.6;
+}
+
+.circle-15 {
+  opacity: 0.15;
+
+  stroke-dasharray: 42.39 282.6;
+}
+
+.circle-20 {
+  opacity: 0.2;
+
+  stroke-dasharray: 56.52 282.6;
+}
+
+.circle-25 {
+  opacity: 0.25;
+
+  stroke-dasharray: 70.65 282.6;
+}
+
+.circle-30 {
+  opacity: 0.3;
+
+  stroke-dasharray: 84.78 282.6;
+}
+
+.circle-35 {
+  opacity: 0.35;
+
+  stroke-dasharray: 98.91 282.6;
+}
+
+.circle-40 {
+  opacity: 0.4;
+
+  stroke-dasharray: 113.04 282.6;
+}
+
+.circle-45 {
+  opacity: 0.45;
+
+  stroke-dasharray: 127.17 282.6;
+}
+
+.circle-50 {
+  opacity: 0.5;
+
+  stroke-dasharray: 141.3 282.6;
+}
+
+.circle-55 {
+  opacity: 0.55;
+
+  stroke-dasharray: 155.43 282.6;
+}
+
+.circle-60 {
+  opacity: 0.6;
+
+  stroke-dasharray: 169.56 282.6;
+}
+
+.circle-65 {
+  opacity: 0.65;
+
+  stroke-dasharray: 183.69 282.6;
+}
+
+.circle-70 {
+  opacity: 0.7;
+
+  stroke-dasharray: 197.82 282.6;
+}
+
+.circle-75 {
+  opacity: 0.75;
+
+  stroke-dasharray: 211.95 282.6;
+}
+
+.circle-80 {
+  opacity: 0.8;
+
+  stroke-dasharray: 226.08 282.6;
+}
+
+.circle-85 {
+  opacity: 0.85;
+
+  stroke-dasharray: 240.21 282.6;
+}
+
+.circle-90 {
+  opacity: 0.9;
+
+  stroke-dasharray: 254.34 282.6;
+}
+
+.circle-95 {
+  opacity: 0.95;
+
+  stroke-dasharray: 268.47 282.6;
+}
+
+.circle-100 {
+  opacity: 1;
+
+  stroke-dasharray: 282.6 282.6;
+}

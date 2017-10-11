@@ -1,0 +1,38 @@
+.flipper {
+  position: relative;
+
+  transform-style: preserve-3d;
+
+  transition: 1s;
+}
+
+.flipper_back {
+  transform: rotateY(180deg);
+}
+
+.flipper__front,
+.flipper__back {
+  overflow: hidden;
+
+  background-color: rgba(#1c1f29, 0.5);
+  border-radius: 4px;
+  backface-visibility: hidden;
+}
+
+.flipper__front {
+  position: relative;
+  z-index: 2;
+  transform: rotateY(0);
+}
+
+.flipper__back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  padding-top: 30px;
+  overflow: initial;
+  transform: rotateY(180deg);
+}

@@ -1,0 +1,78 @@
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 650px;
+
+@include tablet {
+    background-image: url("../images/bg/header-bg.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.welcome__auth-btn {
+  position: absolute;
+  top: 24px;
+  right: 100px;
+  z-index: 10;
+
+  transition: all 0.4s;
+
+@include laptop {
+    right: 20px;
+  }
+
+@include phone {
+    right: initial;
+  }
+}
+
+.welcome__main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+
+  transform: translate(-50%, -50%);
+}
+
+.welcome__flipper {
+  perspective: 1000px;
+}
+
+.welcome__person {
+  margin-bottom: 35px;
+}
+
+.welcome__social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.welcome__title {
+  margin-bottom: 35px;
+}
+
+.welcome__auth-form {
+  margin: 0 20px;
+}
+
+.welcome__auth-buttons {
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  width: 100%;
+}
+
+.welcome-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}

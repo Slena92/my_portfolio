@@ -1,0 +1,94 @@
+extends ../template
+
+block title
+  title Блог
+
+block content
+  main.content
+    section.section.header.header_blog
+      .header__social
+        +socialList("header", socials)
+      .header__menu-button
+        a.nav-toggle(href="#")
+         span.nav-toggle__button
+      nav.fullscreen-nav
+        +navList("nav__list_fullscreen", "fullscreen", navItems)
+      .header__content
+        .header__person
+          .person
+            .person__photo
+              img(class="person__photo-pic" src="assets/images/content/my-ava.jpg", alt="Фотоавтора блога")
+            section.section-title.section-title_color_white
+              section.section-title__header Блог
+              section.section-title__info Статьи, которые я написала
+        .header__content-bg_blog
+          +headerContentBg("blog")
+      .header__scroll.scroll
+        a.scroll__link(href="#")#scroll-down
+          .scroll__icon
+            +icon("fill_white", "portf_arrow_down")
+            
+  
+    section.section.blog
+      section.section__triangle.section__triangle_left
+        .triangle.triangle_color_white
+          svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 100" preserveaspectratio="none")
+            polygon(points="0,100 0,0 500,85 500,100")
+      section.section__triangle.section__triangle_right
+        .triangle.triangle_color_white
+          svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 100" preserveaspectratio="none")
+            polygon(points="0,100 0,85 500,0 500,100")
+      .blog__left
+        .blog__nav
+          .nav
+            +navList("nav__list_blog", "blog", blogNavItems)
+        button.blog__btn-sidebar-open
+      .blog__right
+        .blog__content
+          article.blog__article(id="samoe-vajnoe-v-sass")
+            .blog__article-title Самое важное в SASS
+            .blog__article-date 4 сентября 2017
+            .blog__article-content
+              include:markdown-it ../../articles/about-sass.md
+          article.blog__article(id="priyomy-v-vyorstke-bez-kotoryh-ne-obhoditsya-ni-odin-sajt")
+            .blog__article-title Приёмы в вёрстке, без которых не обходится ни один сайт
+            .blog__article-date 21 августа 2017
+            .blog__article-content
+              include:markdown-it ../../articles/best-practices.md
+          article.blog__article(id="samyj-neobhodimyj-nabor-gulp-plaginov")
+            .blog__article-title Самый необходимый набор Gulp плагинов
+            .blog__article-date 11 мая 2017
+            .blog__article-content
+              include:markdown-it ../../articles/gulp-plugins.md
+          article.blog__article(id="pochemu-ya-vybral-Jade")
+            .blog__article-title Почему я выбрал Jade
+            .blog__article-date 3 апреля 2017
+            .blog__article-content
+              include:markdown-it ../../articles/jade.md
+
+  footer.footer.footer_dark
+    .footer__top
+      .footer__col.footer__col_copyright
+        .footer__info.
+          Этот сайт я сделалa в рамках обучения в Школе онлайн образования LoftSchool. 
+      .footer__col.footer__col_nav
+        .footer__nav
+          nav.nav
+            +navList("nav__list_footer", "footer", navItems)
+        .footer__social
+          +socialList("footer", socials)
+      .footer__col.footer__col_contacts
+        .footer__contacts
+          ul.footer__contacts-list
+            li.footer__contacts-item
+              a(href="skype:SkypeUser" class="footer__contacts-link") leno4ka129327@gmail.com
+            li.footer__contacts-item
+              a(href="mailto:leno4ka129327@gmail.com" class="footer__contacts-link") crismsfiva@gmail.com
+            li.footer__contacts-item
+              a(href="tel:+89055008740"  class="footer__contacts-link") 8 905 500 87 40
+            li.footer__contacts-item
+              |Москва, ул. Палехская, д.12        
+    .footer__bottom
+      .footer__copyright
+        .footer__span © Дмитрий Федотов
+        .footer__span | Создано с любовью в LoftSchool | 2017

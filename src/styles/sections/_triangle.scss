@@ -1,0 +1,37 @@
+.triangle {
+  width: 100%;
+  display: flex;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: $white-color;
+  }
+}
+
+.triangle_color_beige {
+
+  svg {
+    fill: $beige-color;
+  }
+
+  @include tablet {
+    svg {
+      fill: $light-beige-color;
+    }
+  }
+}
+
+.triangle_color_light-beige {
+
+  svg {
+    fill: $light-beige-color;
+  }
+}
+
+.triangle_color_blue {
+
+  svg {
+    fill: rgba($dark-blue-color, .85);
+  }
+}

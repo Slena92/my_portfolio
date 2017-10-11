@@ -1,0 +1,132 @@
+.icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.icon_welcome {
+  width: 31px;
+  height: 23px;
+  margin: 0 14px;
+
+  opacity: 0.5;
+
+  transition-duration: 0.2s;
+  transition-property: opacity, fill;
+
+  fill: #ffffff;
+
+  &:hover {
+    opacity: 1;
+
+    fill: #0a44aa;
+  }
+}
+
+.icon_header {
+  @extend .icon_welcome;
+}
+
+.icon_footer {
+  margin: 0 26px 0 0;
+
+@extend .icon_welcome;
+}
+
+.icon_contacts {
+  width: 46px;
+  height: 45px;
+
+  fill: $accent-color;
+}
+
+.icon_menu {
+  width: 40px;
+  height: 35px;
+
+  fill: $white-color;
+}
+
+.icon_title-bg-about {
+  max-width: 100%;
+  height: auto;
+
+  transform: rotate(-170deg);
+
+  fill: none;
+  stroke: #dbe0e6;
+
+  circle {
+    fill: #dbe0e6;
+  }
+}
+
+.icon_title-bg-portfolio {
+  @extend .icon_title-bg-about;
+  stroke: #3b3e4b;
+
+  circle {
+    fill: #3b3e4b;
+  }
+}
+
+.icon_title-bg-reviews {
+  transform: rotate(25deg);
+  opacity: 0.4;
+
+@extend .icon_title-bg-about;
+  stroke: $white-color;
+
+  circle {
+    fill: $white-color;
+  }
+}
+
+.icon_header-content-bg-portfolio {
+  max-width: 100%;
+  height: auto;
+
+  opacity: 0.15;
+
+  fill: none;
+  stroke: $white-color;
+
+  circle {
+    fill: $white-color;
+  }
+}
+
+.icon_header-content-bg-about {
+  @extend .icon_header-content-bg-portfolio;
+}
+
+.icon_header-content-bg-blog {
+  @extend .icon_header-content-bg-portfolio;
+}
+
+.icon_fill_white {
+  fill: $white-color;
+}
+
+.icon_fill_black {
+  fill: #000000;
+}
+
+.icon_auth {
+  fill: #c4cbcd;
+}
+
+.icon_check {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 0;
+  height: 0;
+
+  transform: translate(-50%, -50%);
+
+  transition: width 0.3s, height 0.3s;
+
+  fill: $white-color;
+}

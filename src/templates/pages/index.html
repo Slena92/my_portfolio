@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <title>Добро пожаловать!</title>
+    <link rel="stylesheet" href="assets/styles/app.min.css">
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="preloader__container">
+        <div class="preloader__icon">
+          <svg class="icon preloader-elem" xmlns="http://www.w3.org/2000/svg" viewbox="-14 -10 80 92">
+            <text class="preloader-elem__text" transform="matrix(1 0 0 1 5.772 45.0889)" text-anchor="middle" x="20" y="0">0</text>
+            <circle class="preloader-elem__inner" stroke-width="2.5864" stroke-miterlimit="10" cx="26.293" cy="37.438" r="25" transform="rotate(-90 26.293 37.438)"></circle>
+            <circle class="preloader-elem__outer" cx="26.293" cy="4.5" r="4.5"></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <main class="content">
+        <section class="welcome parallax">
+          <div class="parallax__layer">
+            <video class="parallax__layer-video" width="100%" height="auto" preload="auto" autoplay="autoplay" loop="loop">
+              <source src="assets/videos/night.mp4" type="video/mp4"/>
+              <source src="assets/videos/night.webm" type="video/webm"/>
+            </video>
+          </div>
+          <div class="parallax__layer"><img class="parallax__layer-img" src="assets/images/bg/night_bg.png"/></div>
+          <div class="welcome__auth-btn"><a class="btn btn__auth" href="#">Авторизоваться </a></div>
+          <div class="welcome__main">
+            <div class="welcome__flipper">
+              <div class="flipper">
+                <div class="flipper__front">
+                  <div class="welcome__person person">
+                    <div class="person__photo"><img class="person__photo-pic" src="assets/images/content/my-ava.jpg" alt="Фото автора блога"></div>
+                    <div class="person__name">Сорокина Елена</div>
+                    <div class="person__desc">Личный сайт веб разработчика </div>
+                  </div>
+                  <div class="welcome__social">
+                    <ul class="social">
+                      <li class="social__item"><a class="social__link" href="https://vk.com/slena92" target="_blank">
+                          <svg class="icon icon_welcome">
+                            <use xlink:href="assets/images/icons/sprite.svg#vk"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a class="social__link" href="https://github.com/slena92" target="_blank">
+                          <svg class="icon icon_welcome">
+                            <use xlink:href="assets/images/icons/sprite.svg#github"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a class="social__link" href="https://www.instagram.com/slena92/" target="_blank">
+                          <svg class="icon icon_welcome">
+                            <use xlink:href="assets/images/icons/sprite.svg#in"></use>
+                          </svg></a></li>
+                    </ul>
+                  </div>
+                  <div class="welcome__buttons">
+                    <ul class="nav__list nav__list_welcome">
+                      <li class="nav__item nav__item_welcome"><a class="nav__link nav__link_welcome" href="my-works.html">Мои работы</a></li>
+                      <li class="nav__item nav__item_welcome"><a class="nav__link nav__link_welcome" href="about.html">Обо мне</a></li>
+                      <li class="nav__item nav__item_welcome"><a class="nav__link nav__link_welcome" href="blog.html">Блог</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="flipper__back">
+                  <div class="welcome__title">
+                    <section class="section-title_subtitle section-title_subtitle_auth">Авторизуйтесь</section>
+                  </div>
+                  <div class="welcome__auth-form">
+                    <form class="form" action="#" method="post" id="auth-form">
+                      <div class="form__field">
+                        <input class="form__input form__input_login" type="text" placeholder="Логин" name="login">
+                        <div class="form__field-icon">
+                          <svg class="icon icon_auth">
+                            <use xlink:href="assets/images/icons/sprite.svg#login"></use>
+                          </svg>
+                        </div>
+                        <div class="form-tooltip form-tooltip_login"><span class="form-tooltip__text">Вы не ввели логин</span></div>
+                      </div>
+                      <div class="form__field">
+                        <input class="form__input form__input_login" type="password" placeholder="Пароль" name="password">
+                        <div class="form__field-icon">
+                          <svg class="icon icon_auth">
+                            <use xlink:href="assets/images/icons/sprite.svg#password"></use>
+                          </svg>
+                        </div>
+                        <div class="form-tooltip form-tooltip_password"><span class="form-tooltip__text">Вы не ввели пароль</span></div>
+                      </div>
+                      <div class="form__line">
+                        <div class="form__checkbox">
+                          <label class="form__check-label">
+                            <input class="form__check-elem" type="checkbox" name="check" id="auth-check">
+                            <div class="form__check-fake">
+                              <svg class="icon icon_check">
+                                <use xlink:href="assets/images/icons/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="form__check-title">Я человек
+                              <div class="form-tooltip form-tooltip_right form-tooltip_check"><span class="form-tooltip__text">Роботов не пускаем</span></div>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form__line-title"><span class="form__line-title-text">Вы точно не робот?
+                          <div class="form-tooltip form-tooltip_right form-tooltip_radio"><span class="form-tooltip__text">Роботов не пускаем</span></div></span></div>
+                      <div class="form__line">
+                        <div class="form__radio">
+                          <label class="form__radio-label">
+                            <input class="form__radio-elem" type="radio" name="welcome-radio" id="auth-radio-yes">
+                            <div class="form__radio-fake"></div>
+                            <div class="form__radio-text">Да</div>
+                          </label>
+                        </div>
+                        <div class="form__radio">
+                          <label class="form__radio-label">
+                            <input class="form__radio-elem" type="radio" name="welcome-radio" id="auth-radio-no">
+                            <div class="form__radio-fake"></div>
+                            <div class="form__radio-text">Не уверен</div>
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="welcome__auth-buttons">
+                    <button class="btn btn_form btn_auth" id="btn-main">На главную</button>
+                    <button class="btn btn_form" form="auth-form" type="submit" id="btn-login">Войти</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="welcome-overlay">     </div>
+        </section>
+      </main>
+      <footer class="footer footer_welcome">
+        <div class="footer__copyright">
+          <div class="footer__span">© Сорокина Елена</div>
+          <div class="footer__span">| Создано с любовью в LoftSchool | 2017</div>
+        </div>
+      </footer>
+    </div>
+    <script src="assets/scripts/bundle.js"></script>
+  </body>
+</html>
